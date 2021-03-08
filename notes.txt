@@ -57,3 +57,21 @@ PT3
       with Interpolations
     -v-html: write HTML directly in your Vue code;
       omits double curly brace syntax
+
+  Conditional Rendering (using IF statements)
+    -use v-if within html tags to render
+      data based on certain conditions
+    <template></template>
+      special Vue syntax:
+      evaluates all the js in all of the
+      divs that are wrapped inside template
+    -more complex conditionals will use
+      v-else and v-else-if
+    -keep in mind that these rendering statements
+      are destructive to the DOM (it is not simply
+      hiding and showing data)
+
+  Looping
+    -v-for="i in 5"
+      -prints content of div 5 times
+    -this is not 0 based indexing
