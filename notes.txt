@@ -1,0 +1,59 @@
+<Vue JS>
+
+PT1/PT2
+Versatility
+  -use for entire app,
+  or just for components
+
+Virtual DOM
+  -Uses custom JS objects to
+  build elements
+  -Is a layer between Vue and
+  the real DOM
+
+  Patching:
+    -matching the virtual
+    DOM with the real DOM
+    -these are the changes that
+    need to be made to match DOM's.
+    -these changes are stored as a
+    queue
+    -TICK: the process of moving from
+    patching to the creation of a brand
+    new DOM
+    -patching process removes VUE-only
+    code
+    -this process is also referred to as
+    DOM diffing
+
+Understanding Reactivity
+  -if data changes, computer
+  properties are automatically
+  recomputed
+  -this is what makes it a "computed property"
+  rather than a simple variable. its computed on
+  the fly
+  -computed properties are added to Vue using the
+  computed: {} object
+
+V-Model
+  -ties an HTML input field
+  to a data property in Vue
+  -example : <input name="field" v-model="field" />
+
+Computed properties are getters only
+  -this makes things difficult when
+  data needs to be manipulated as it
+  is coming in
+
+Methods
+  -Methods vs computed properties:
+    methods do not have computed properties
+
+
+PT3
+  Interpolations
+    -v-once: does not allow for repeating
+      with Interpolations
+    -v-html: write HTML directly in your Vue code;
+      omits double curly brace syntax
