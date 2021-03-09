@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="13-data-driven-nav.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    </head>
+    <body>
+        <div id="app">
+
+            <nav class="nav-wrapper">
+
+                <div class="logo">
+                    Vue
+                </div>
+                <div class="flex">
+                    <div v-for="item in nav">
+                        <a :href="item.link"
+                            class="link-item"
+                            :class="[ (item.subLinkModal) ? 'link-active' : '' ]"
+                            @click="toggleSubModal(item)">
+                                {{ item.title }}
+                        </a>
+
+                        <template v-if="item.subLinks && item.subLinkModal">
+                            <div class="sublinks">
+                                <a v-for="subLink in item.subLinks" :href="subLink.link" class="link-item">{{ subLink.title }}</a>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+
+            </nav>
+
+            <div class="body-text">
+                Learning Vue on Scrimba!
+            </div>
+
+        </div>
+
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    nav: [
+                        { title: 'Home', link: '#home' },
+                        { title: 'About', link: '#about', subLinks: [
+                            { title: 'Audio', link: '#audio' },
+                            { title: 'Video', link: '#video' },
+                            { title: 'Web', link: '#web' },
+                        ], subLinkModal: false },
+                        { title: 'Services', link: '#services', subLinks: [
+                            { title: 'Audio', link: '#audio' },
+                            { title: 'Video', link: '#video' },
+                            { title: 'Web', link: '#web' },
+                        ], subLinkModal: false },
+                    ]
+                },
+                methods: {
+                    toggleSubModal: function (item) {
+                        if (item.subLinks) {
+                            item.subLinkModal = ! item.subLinkModal;
+                        }
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

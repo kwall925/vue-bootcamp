@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+        <style>
+            .danger {
+                color: red;
+            }
+            .active {
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app" class="bg-blue-300 h-screen w-full flex flex-col justify-center items-center text-sm relative">
+
+            <div :class="styling">Text</div>
+
+        </div>
+
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    isDanger: false,
+                    important: false,
+                    myDiv: { 'danger': true, 'font-bold': false }
+                },
+                computed: {
+                    styling: function () {
+                        return {
+                            'danger': 25 < 5,
+                        }
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

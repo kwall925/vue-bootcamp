@@ -75,3 +75,17 @@ PT3
     -v-for="i in 5"
       -prints content of div 5 times
     -this is not 0 based indexing
+
+  Class Binding
+    -tie classes to elements using Vue's
+      data driven approach (v-bind:class)
+    -apply classes as objects and tie them
+      to conditions:
+      <div v-bind:class="{ 'danger': isDanger }">Text</div>
+    -array syntax can also be used for class
+      bindings -- this allows you to use
+      mulitple classes
+
+  Inline Styling
+    -v-bind:style
+      <div v-bind:style="{ color: 'red' }">Text</div>
