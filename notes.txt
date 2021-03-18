@@ -89,3 +89,28 @@ PT3
   Inline Styling
     -v-bind:style
       <div v-bind:style="{ color: 'red' }">Text</div>
+
+PT4
+
+  Components
+    -Loosely defined:
+      "Extraction of a single element"
+    -The perfect tool for reusability
+      and encapsulation
+    -Can divide your app into small pieces
+    -Components use every feature of Vue
+    -Components only re-render when necessary
+      which is fantastic for DOM updates
+
+  Vue.component('name', {})
+
+  template: defines html
+
+  data: must contain a function() that
+    returns something
+
+  slots: seem confusing and verbose, but are
+    the best way to push data into components
+
+  props: Vue's unique way of calling attributes.
+    stored as an array: props: ['userId']
