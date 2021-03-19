@@ -114,3 +114,13 @@ PT4
 
   props: Vue's unique way of calling attributes.
     stored as an array: props: ['userId']
+
+  Single File Components
+    -Each component should have its own file,
+    and carry an import/export relationship with
+    index.js, which has Vue as a dependency
+
+  Style CSS within the component file
+    <style scoped>
+      /* CSS Code Here */
+    </style>
